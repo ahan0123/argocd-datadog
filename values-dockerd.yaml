@@ -1,0 +1,13 @@
+datadog:
+  logs:
+    enabled: true
+    containerCollectAll: true
+    autoMultiLineDetection: true
+  env:
+    - name: DD_ENV
+      value: "kind-argocd"
+
+clusterAgent:
+  enabled: true
+  replicas: 3
+  createPodDisruptionBudget: true
