@@ -8,8 +8,8 @@ spec:
     namespace: bolinas
     server: 'https://kubernetes.default.svc'
   source:
-    path: ./datadog
-    repoURL: 'https://stash.guidewire.com/scm/ccs/bolinas-upskill-argocd.git'
+    path: ''
+    repoURL: 'https://github.com/ahan0123/argocd-datadog.git'
     targetRevision: HEAD
     helm:
       valueFiles:
