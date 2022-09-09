@@ -1,17 +1,10 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: datadog
-spec:
-  destination:
-    name: ''
-    namespace: bolinas
-    server: 'https://kubernetes.default.svc'
-  source:
-    path: ''
-    repoURL: 'https://github.com/ahan0123/argocd-datadog.git'
-    targetRevision: HEAD
-    helm:
-      valueFiles:
-        - values-dockerd.yaml
-  project: default
+project: default
+source:
+  repoURL: 'https://github.com/ahan0123/argocd-datadog.git'
+  path: .
+  helm:
+    valueFiles:
+      - values-dockerd.yaml
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: default
